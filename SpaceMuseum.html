@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Sadeem</title>
+        <link rel="icon" href="img/LinB2.png">
+		<link rel="stylesheet" href="CS.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        
+        <style>
+            padding-bottom:
+        </style>
+    
+<!--        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
+        <script src="Museum.js"></script>
+<!--
+        <script src="Museum.js">
+            var x = InputFunc();
+            document.write(x);
+        </script>
+-->
+    </head>
+    
+    <body>
+        <header>
+			
+			<!-- Search box -->
+			<div class="SearchBox">
+				<input class="inputTxt" type="text" name="Search" placeholder="Search..."/>
+				<a class="Sbtn"><i class="fa fa-search"></i></a>
+			</div>
+			<!-- end -->
+
+			<!-- الشعار -->
+			<img id="logo" src="img/logo3.png" alt="Sadeem" width="350" height="250">
+			
+			<!-- القائمة-->
+						<div class="navbar">
+			
+				<a href="index.html"> <img class="imge" src="img/Home.png" alt=""> Home </a>	
+				
+				<div class="dropdown">
+					<button class="dropbtn"> <img class="imge" id="Nws" src="img/New.png" alt=""> <a href="News.html">  News </a></button>
+					<div class="dropdown-content">
+						<a href="NewsAboutAstronomy.html">News about astronomy</a>
+						<a href="Calendar.html">Calendar</a>
+					</div>
+				</div>
+				
+				<a href="SpaceMuseum.html"> <img class="imge" src="img/Museum.png" alt=""> Space Museum </a>
+				
+				<div class="dropdown">
+					<button class="dropbtn"> <img class="imge" id="SpGme" src="img/games.png" alt=""> <a href="spacegamehome.html"> Space games </a></button>
+					<div class="dropdown-content">
+						<a href="spacegame1.html">Space games 1</a>
+						<a href="spacegame2.html">Space games 2</a>
+					</div>
+				</div>
+				
+				<a href="watpn.html" > <img class="imge" id="WATPN" src="img/Sun.png" alt=""> Where are the planets now?</a>
+				<a href="ContactUs.html"> <img class="imge" src="img/ContUs.png" alt=""> Contact us</a>
+				<a href="AboutUs.html"> <img class="imge" src="img/AboutUs.png" alt=""> About us</a>
+				<a href="Sitemap.html"> <img class="imge" src="img/Sitemap.png" alt=""> Sitemap</a>
+			</div> 
+			<!-- end -->
+			
+            <!-- Breadcrumb -->
+			<ul class="Breadcrumb">
+                <li> <a href="index.html">Home</a> </li>
+                <li> Space Museum </li>
+			</ul>
+			<!-- end Breadcrumb -->
+			
+		</header>
+		
+		
+		<main style="margin-top: 17%; margin-bottom: 17%">
+            
+<!--
+            <script type="text/javascript">
+                var x = InputFunc();
+                document.write(x);
+                document.write("<br>");
+            </script>
+-->
+            
+            <h2 style="float:left">Museum Visiting Appointments</h2>
+           
+            <p style="background-color:#708090; opacity:.7; width:700px; height:150px; margin-left:350px; padding:20; font-size:20px">
+                About the museum: The museum will show you the space and the planets as if you were there. <br>
+                You will expeirence how it feels to be in space. <br><br>
+                How to book tickets: You should select a visitation date and fill in you details, in order to visit the museum.
+            </p>
+            <br>
+            
+             
+            
+            <form name="RegMue" action="Museum.js" onsubmit="return InputFunc()" method="post">
+            <fieldset style="padding:70; line-height: 2em">
+                
+                
+                <div style="float:left; padding-left:80px">
+                    Email <input type="email" name="email">
+                <br>
+                    Phone No <input type="tel" name="phoneNo">
+                <br>
+<!--                -----Credit Card Details------->
+                    First Name <input type="text" name="firstName">
+                <br>
+                    Last Name <input type="text" name="lastName">
+                <br>
+                    Number of Visitors <input type="number" name="NoVis">
+                    <!--
+                <br>
+                    Expiration Date <input type="text" name="expDate">
+                <br>
+                    CVV <input type="password" name="CVV">
+-->
+                <br>
+
+                    <a href="url" target="_blank">Privacy </a> <a href="url" target="_blank">Policy </a>
+                <br>
+                    I Accept <input type="checkbox" name="accept">
+                <br>
+                    <button type="button" onclick="InputFunc(); return false;"> Confirm </button>
+            </div>
+                <div style="padding-left:500px;"> 
+            <select name="appointments" size="1" style="font-size:25px; opacity:.7; background-color:#708090; padding:20; margin:20px">
+                <option value="">Please choose a date.</option>
+                <option value="">Sunday 6th march: 8AM-10AM</option>
+                <option value="">Sunday 6th march: 10AM-12PM</option>
+                <option value="">Sunday 6th march: 2PM-4PM</option>
+                <option value="">Sunday 6th march: 4PM-6PM</option>
+                <option value="">Monday 7th march: 10AM-12PM</option>
+                <option value="">Monday 7th march: 4PM-6PM</option>
+                <option value="">Tuesday 8th march: 8AM-10AM</option>
+                <option value="">Tuesday 8th march: 10AM-12PM</option>
+                <option value="">Tuesday 8th march: 2PM-4PM</option>
+                <option value="">Wednesday 9th march: 2PM-4PM</option>
+                <option value="">Wednesday 9th march: 4PM-6PM</option>
+                <option value="">Thursday 10th march: 8AM-10AM</option>
+                <option value="">Thursday 10th march: 10AM-12PM</option>
+                <option value="">Thursday 10th march: 2PM-4PM</option>
+                <option value="">Thursday 10th march: 4PM-6PM</option>
+            </select>
+            </div>
+                
+                </fieldset>
+                </form>
+            
+		</main>
+		
+		
+		<aside>
+		</aside>
+		
+		
+		<footer>
+			<p> Copyright 2019 </p>
+		</footer>
+    </body>
+</html>
