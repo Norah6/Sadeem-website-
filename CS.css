@@ -1,0 +1,393 @@
+html{
+    
+	height: 100%;
+	width: 100%;
+    
+}
+
+body{
+    
+	background-image: url("img/background.png");
+	background-repeat: no-repeat;
+	background-color:#1d242f;
+	background-attachment:scroll;
+	color:white;
+	height: 100%;
+	width: 100%;
+	overflow:scroll;
+	/*position: absolute;*/
+    position: static;
+    margin-bottom: 20%;
+    
+}
+
+header{
+    
+	width:100%;
+	height:20%;
+    
+}
+
+main{
+	margin-top:5%;
+	width: 70%;
+	height: 60%;
+	padding-left:15%;
+	padding-bottom:10%;
+	padding-top:18%;
+    padding-right: 15%;
+	float:center;
+    position:
+    
+}
+
+h2{
+	text-align:center;
+}
+
+#Hpic {
+    float: center;
+    padding-bottom: 10%;
+	margin-top:10%;
+}
+
+/*===================================== ستايل البحث =====================================*/
+.container-fluid{
+    
+}
+.SearchBox{
+	position:absolute;
+	top:4%;
+	left:80%;
+	background-color: #2F3640;
+	border-radius:40px;
+	height:20px;
+	padding:10px;
+}
+.inputTxt{
+	border:none;
+	outline:none;
+	background:none;
+	float:left;
+	padding:0;
+	color:#fff;
+	font-size:16px;
+	line-height:15px;
+	width:180px;
+}
+.Sbtn{
+	color:#1abc9c;
+	float:right;
+	text-decoration:none;
+	width:40px;
+	height:40px;
+	text-align:center;
+	border-radius:50%;
+	line-height:15px;
+}
+
+/*===================================== نهاية ستايل البحث =====================================*/
+
+#logo{
+	padding-top:4%;
+	display: block;
+	margin-left:35%;
+	margin-bottom:3%;
+}
+/*===================================== ستايل القائمة =====================================*/
+
+.imge{
+	display: block;
+	margin-right:auto;
+	width:50px;
+	height:50px;
+	padding-left:4%;
+}
+
+#Nws{
+	padding-left:23%;
+}
+
+#WATPN{
+	padding-left:35%;
+}
+
+#SpMu{
+	padding-left:20%;
+}
+
+#SpGme{
+	padding-left:30%;
+}
+
+.navbar{  
+	overflow: hidden;
+	display: block;
+	padding-left:8%;
+	position: static;
+	border-top-style: ridge;
+	border-bottom-style: ridge;
+	border-width: 1px;
+	border-color:#808080;
+}
+
+.navbar a {
+	color:white;
+	float: left;
+	font-size: 16px;
+	text-align: center;
+	padding: 14px 30px; 
+	text-decoration: none; 
+}
+
+.dropdown {
+	float: left;
+	overflow: hidden;
+}
+
+.dropdown .dropbtn {
+	background-color:transparent;
+	font-size: 16px;  
+	border: none;
+	outline: none;
+	color:white;
+	padding: 14px 16px;
+	font-family: inherit;
+	margin: 0;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	background-color:#2F3640;
+}
+
+.dropdown-content a {
+	float: none;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+	color: #1abc9c;
+	font-weight: bold;
+}
+
+.dropdown-content a:hover {
+	color:violet;
+}
+
+
+/* =====================================نهاية ستايل القائمة ===================================== */
+
+/*======================================= Breadcrumb ستايل الـ ===================================*/
+
+ul.Breadcrumb{
+    
+	color:#242440;
+	list-style:none;
+	background-color:slategray;
+	padding:4px;
+	font-size:16px;
+	padding-left:15%;
+}
+
+ul.Breadcrumb li{
+	display:inline-block;
+}
+
+ul.Breadcrumb li + li:before{
+	color:white;
+	content:">";
+	padding-right:10px;
+}
+
+ul.Breadcrumb li a{
+	color:white;
+	text-decoration:none;
+	padding:5px;
+}
+
+ul.Breadcrumb li a:hover{
+	color:turquoise;
+	text-decoration:underline;
+}
+	
+/*======================================= Breadcrumb نهاية  ستايل الـ ===================================*/
+
+.games{
+    
+	display:inline-block;
+	padding-right:5%;
+	padding-left:10%;
+	float:center;
+	text-align: center;
+}
+/*================================================ News ===============================================*/
+.btnNew{
+	display:inline-block;
+	width:50%;
+	height:90%;
+	background-color:slategray;
+	border-width: 1px;
+	border-color:ridge;
+	border-radius: 12px;
+	margin: 10px -2px;
+	transform: translate(5%, 20%);
+	transition: 0.3s;
+}
+
+.btnNew a{
+	color:white;
+	text-decoration: none;
+	font-size:30px;
+	float:center;
+}
+
+.btnNew:hover{
+	background-color: slategray;
+	opacity: 0.5;
+}
+/*============================================== Calender ============================================*/
+#Cldr{
+	box-sizing: border-box;
+	padding-bottom:40%;
+	margin: 1% 7%;
+}
+
+#Cldr ul{
+	list-style-type: none;
+}
+
+.month {
+  padding: 70px 0;
+  width: 100%;
+  background: slategray;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 5px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 5px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 40px;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 40px;
+  background: #eee;
+  margin: 0;
+  padding-bottom:5%;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+
+}
+
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important;
+  padding: 2px;
+
+}
+
+.weekdays li, .days li {
+	width: 12.5%;
+	width: 13.1%;
+}
+
+/*====================================== new about astronomy =========================================*/
+.astronomy{
+	padding-bottom:7%;
+}
+
+#p1 , #p2 , #p3 ,#p4{
+	background-color:slategray;
+	padding-right:10px;
+	padding-left:10px;
+	padding-top:5px;
+	border-style: ridge;
+	border-color:black;
+	padding-bottom:1%;
+}
+
+
+.astronomy img{
+	padding-right:10px;
+}
+
+/*==============================================end new about astronomy =============================================*/
+
+#Submit{
+	background-color:slategray;
+	color:white;
+	width:140px;
+	height:40px;
+	margin-top:1%;
+	margin-left:2%;
+}
+
+ul.Sitemap li{
+	list-style-type:none;
+}
+
+/*============================================== Footer ==============================================*/
+
+footer{
+	border-top-style: ridge;
+	border-width: 1px;
+	border-color:#808080;
+
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	background-color:#2F3640;
+
+}
