@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	 <head>
+		<title>Sadeem</title>
+		<link rel="icon" href="img/LinB2.png">
+		<link rel="stylesheet" href="CS.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	
+	<body>
+        <div style="width: 100%; height: 100%; position: absolute; background-color: white; opacity: 0; pointer-events: none; transition: opacity 700ms ease 0s; z-index: 10;"></div>
+        
+		<header>
+			<!-- Search box -->
+			<div class="SearchBox">
+				<input class="inputTxt" type="text" name="Search" placeholder="Search..."/>
+				<a class="Sbtn"><i class="fa fa-search"></i></a>
+			</div>
+			<!-- end -->
+
+			<!-- الشعار -->
+			<img id="logo" src="img/logo3.png" alt="Sadeem" width="350" height="250">
+			
+			<!-- القائمة-->
+						<div class="navbar">
+			
+				<a href="index.html"> <img class="imge" src="img/Home.png" alt=""> Home </a>	
+				
+				<div class="dropdown">
+					<button class="dropbtn"> <img class="imge" id="Nws" src="img/New.png" alt=""> <a href="News.html">  News </a></button>
+					<div class="dropdown-content">
+						<a href="NewsAboutAstronomy.html">News about astronomy</a>
+						<a href="Calendar.html">Calendar</a>
+					</div>
+				</div>
+				
+				<a href="SpaceMuseum.html"> <img class="imge" src="img/Museum.png" alt=""> Space Museum </a>
+				
+				<div class="dropdown">
+					<button class="dropbtn"> <img class="imge" id="SpGme" src="img/games.png" alt=""> <a href="spacegamehome.html"> Space games </a></button>
+					<div class="dropdown-content">
+						<a href="spacegame1.html">Space games 1</a>
+						<a href="spacegame2.html">Space games 2</a>
+					</div>
+				</div>
+				
+				<a href="watpn.html" > <img class="imge" id="WATPN" src="img/Sun.png" alt=""> Where are the planets now?</a>
+				<a href="ContactUs.html"> <img class="imge" src="img/ContUs.png" alt=""> Contact us</a>
+				<a href="AboutUs.html"> <img class="imge" src="img/AboutUs.png" alt=""> About us</a>
+				<a href="Sitemap.html"> <img class="imge" src="img/Sitemap.png" alt=""> Sitemap</a>
+			</div> 
+			<!-- end -->
+			
+			<!-- Breadcrumb -->
+			<ul class="Breadcrumb">
+				<li> <a href="index.html"> Home </a> </li>
+                <li> Contact Us</li>
+			</ul>
+			<!-- end Breadcrumb -->
+		</header>
+		
+		
+		<main style="margin-top:12%">
+             <img src="contact2.png" id="contact" alt="contact us " hight="90px" width="90px" style="float:inherit">
+            <h1 style="align-content: center"> Contact Us </h1>
+          <!--  <p>
+            this a place or cintent totell about our sekfju 
+            </p> --> 
+            
+            <article id="rootScroll-2" class="FlatScrollContainer__root--1az5C">
+                <div style="transition-timing-function: ease; transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+                    <div class="ContactPage__content--12Tr-" style="height: 600px;">
+                        <div class="ContactPage__formWrapper--3zdnl">
+                            <section class="ContactForm__root--3x-2E">
+                                <div style="opacity:0;pointer-events:none" class="ContactForm__success--26KMB">
+                                    <h2 class="ContactForm__title--1dqbF Text__weight-bold--3nfEf">Thank you, !
+                                    </h2>
+                                    <span class="ContactForm__successMessage--1on7T Text__weight-light--lNiNF">Your message has been sent successfully.
+                                    </span>
+                                    <button class="ContactForm__submitButton--mvVXN ContactForm__enabled--3qQot">
+                                        <span class="Text__weight-normal--Batb0">Send another
+                                        </span>
+                                    </button>
+                                </div>
+                                <div style="opacity:1;pointer-events:all">
+                                    <h2 class="ContactForm__title--1dqbF Text__weight-bold--3nfEf">
+                                    </h2>
+                                    <form id="contactForm" class="ContactForm__form--2qmc7">
+                                        <fieldset style="padding:40px; line-height: 2.5em">
+                                        <div class="ContactForm__leftSide--r6kl1">
+                                            <div class="ContactForm__field--bBOff">
+                                                <label class="ContactForm__label--29osL" for="name">
+                                                    <span class="Text__weight-light--lNiNF">My name is
+                                                    </span>
+                                                </label>
+                                                <input type="text" id="name" name="name" value="" autocomplete="off" class="ContactForm__input--2ug3i" placeholder="Your name">
+                                            </div>
+                                            <div class="ContactForm__field--bBOff">
+                                                <label class="ContactForm__label--29osL" id="phone">
+                                                    <span class="Text__weight-light--lNiNF">My phone number is
+                                                    </span>
+                                                </label>
+                                                <input type="number" id="phone" name="phone" autocomplete="off" class="ContactForm__input--2ug3i" placeholder="Your phone number" value="">
+                                            </div>
+                                            <div class="ContactForm__field--bBOff">
+                                                <label class="ContactForm__label--29osL" id="company">
+                                                    <span class="Text__weight-light--lNiNF">I work at
+                                                    </span>
+                                                </label>
+                                                <input type="text" id="company" name="company" autocomplete="off" class="ContactForm__input--2ug3i" placeholder="Your company" value="">
+                                            </div>
+                                            <div class="ContactForm__field--bBOff">
+                                                <label class="ContactForm__label--29osL" id="email">
+                                                    <span class="Text__weight-light--lNiNF">Reach me at
+                                                    </span>
+                                                </label>
+                                                <input type="text" id="email" name="email" autocomplete="off" class="ContactForm__input--2ug3i" placeholder="Your@email.com" value="">
+                                            </div>
+                                        </div>
+                                        <div class="ContactForm__rightSide--11aUT">
+                                            <div class="ContactForm__field--bBOff">
+                                                <label class="ContactForm__label--29osL" id="message">
+                                                    <span class="Text__weight-light--lNiNF">Message
+                                                    </span>
+                                                </label>
+                                               <textarea id="message" name="message" type="text" autocomplete="off" placeholder="Start typing here..." class="ContactForm__input--2ug3i" style="height: 35px;">
+                                                </textarea> 
+                                            </div>
+                                        </div>
+                                   <!--     <input type="text" name="address" class="ContactForm__hidden--246Ea">
+                                        <input type="text" name="gender" class="ContactForm__hidden--246Ea"> -->
+                                            </fieldset>
+                                    </form>
+                                        <div class="">
+                                    <button form="contactForm" disabled="" class="ContactForm__submitButton--mvVXN" id="Submit" type="submit">
+                                        <span class="Text__weight-normal--Batb0">Submit
+                                        </span>
+                                    </button>
+                                    </div>
+                                        
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="ContactPage__sidebar--1HYjU" style="height: 50px;">
+                        <div class="ContactPage__block--2_0qY">
+                        </div>
+                    </div>
+                </div>
+            </article>
+         
+		<!--	<img src="home.png" id="Hpic" alt="Sadeem" hight= "600px"; width="900px"> -->
+		</main>
+		
+		
+		<aside>
+		</aside>
+		
+		
+		<footer>
+			<p> Copyright 2019 </p>
+		</footer>
+		
+		
+	</body>
+</html>
