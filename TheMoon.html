@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+	 <head>
+		<title>Sadeem</title>
+		<link rel="icon" href="img/LinB2.png">
+		<link rel="stylesheet" href="CS.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.img-comp-container {
+  position: relative;
+  height: 200px; /*should be the same height as the images*/
+}
+
+.img-comp-img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow:hidden;
+}
+
+.img-comp-img img {
+  display:block;
+  vertical-align:middle;
+}
+
+.img-comp-slider {
+  position: absolute;
+  z-index:9;
+  cursor: ew-resize;
+  /*set the appearance of the slider:*/
+  width: 40px;
+  height: 40px;
+  background-color: #2196F3;
+  opacity: 0.7;
+  border-radius: 50%;
+}
+</style>
+<script>
+function initComparisons() {
+  var x, i;
+  /*find all elements with an "overlay" class:*/
+  x = document.getElementsByClassName("img-comp-overlay");
+  for (i = 0; i < x.length; i++) {
+    /*once for each "overlay" element:
+    pass the "overlay" element as a parameter when executing the compareImages function:*/
+    compareImages(x[i]);
+  }
+  function compareImages(img) {
+    var slider, img, clicked = 0, w, h;
+    /*get the width and height of the img element*/
+    w = img.offsetWidth;
+    h = img.offsetHeight;
+    /*set the width of the img element to 50%:*/
+    img.style.width = (w / 2) + "px";
+    /*create slider:*/
+    slider = document.createElement("DIV");
+    slider.setAttribute("class", "img-comp-slider");
+    /*insert slider*/
+    img.parentElement.insertBefore(slider, img);
+    /*position the slider in the middle:*/
+    slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+    slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+    /*execute a function when the mouse button is pressed:*/
+    slider.addEventListener("mousedown", slideReady);
+    /*and another function when the mouse button is released:*/
+    window.addEventListener("mouseup", slideFinish);
+    /*or touched (for touch screens:*/
+    slider.addEventListener("touchstart", slideReady);
+    /*and released (for touch screens:*/
+    window.addEventListener("touchstop", slideFinish);
+    function slideReady(e) {
+      /*prevent any other actions that may occur when moving over the image:*/
+      e.preventDefault();
+      /*the slider is now clicked and ready to move:*/
+      clicked = 1;
+      /*execute a function when the slider is moved:*/
+      window.addEventListener("mousemove", slideMove);
+      window.addEventListener("touchmove", slideMove);
+    }
+    function slideFinish() {
+      /*the slider is no longer clicked:*/
+      clicked = 0;
+    }
+    function slideMove(e) {
+      var pos;
+      /*if the slider is no longer clicked, exit this function:*/
+      if (clicked == 0) return false;
+      /*get the cursor's x position:*/
+      pos = getCursorPos(e)
+      /*prevent the slider from being positioned outside the image:*/
+      if (pos < 0) pos = 0;
+      if (pos > w) pos = w;
+      /*execute a function that will resize the overlay image according to the cursor:*/
+      slide(pos);
+    }
+    function getCursorPos(e) {
+      var a, x = 0;
+      e = e || window.event;
+      /*get the x positions of the image:*/
+      a = img.getBoundingClientRect();
+      /*calculate the cursor's x coordinate, relative to the image:*/
+      x = e.pageX - a.left;
+      /*consider any page scrolling:*/
+      x = x - window.pageXOffset;
+      return x;
+    }
+    function slide(x) {
+      /*resize the image:*/
+      img.style.width = x + "px";
+      /*position the slider:*/
+      slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+    }
+  }
+}
+</script>
+	</head>
+	
+	<body>    
+		<header>
+			<!-- Search box -->
+			<div class="SearchBox">
+				<input class="inputTxt" type="text" name="Search" placeholder="Search..."/>
+				<a class="Sbtn"><i class="fa fa-search"></i></a>
+			</div>
+			<!-- end -->
+
+			<!-- الشعار -->
+			<img id="logo" src="img/logo3.png" alt="Sadeem" width="350" height="250">
+			
+			<!-- القائمة-->
+						<div class="navbar">
+			
+				<a href="index.html"> <img class="imge" src="img/Home.png" alt=""> Home </a>	
+				
+				<div class="dropdown">
+					<button class="dropbtn"> <img class="imge" id="Nws" src="img/New.png" alt=""> <a href="News.html">  News </a></button>
+					<div class="dropdown-content">
+						<a href="NewsAboutAstronomy.html">News about astronomy</a>
+						<a href="Calendar.html">Calendar</a>
+					</div>
+				</div>
+				
+				<a href="SpaceMuseum.html"> <img class="imge" src="img/Museum.png" alt=""> Space Museum </a>
+				
+				<div class="dropdown">
+					<button class="dropbtn"> <img class="imge" id="SpGme" src="img/games.png" alt=""> <a href="spacegamehome.html"> Space games </a></button>
+					<div class="dropdown-content">
+						<a href="spacegame1.html">Space games 1</a>
+						<a href="spacegame2.html">Space games 2</a>
+					</div>
+				</div>
+				
+				<a href="watpn.html" > <img class="imge" id="WATPN" src="img/Sun.png" alt=""> Where are the planets now?</a>
+				<a href="ContactUs.html"> <img class="imge" src="img/ContUs.png" alt=""> Contact us</a>
+				<a href="AboutUs.html"> <img class="imge" src="img/AboutUs.png" alt=""> About us</a>
+				<a href="Sitemap.html"> <img class="imge" src="img/Sitemap.png" alt=""> Sitemap</a>
+			</div> 
+			<!-- end -->
+			
+			<!-- Breadcrumb -->
+			<ul class="Breadcrumb">
+				<li> <a href="index.html"> Home </a> </li>
+				<li> <a href="watpn.html"> Where are the planets now? </a> </li>
+                <li> The Moon</li>
+			</ul>
+			<!-- end Breadcrumb -->
+		</header>
+		
+		<main style="margin-top:17%; padding-bottom:20%;" >
+			<h2>THE MOON</h2>
+<div class="img-comp-container">
+  <div class="img-comp-img">
+    <img src="img/moon1.jpg" width="300" height="200">
+  </div>
+  <div class="img-comp-img img-comp-overlay">
+    <img src="img/moon2.jpg" width="300" height="200">
+  </div>
+</div>
+
+<script>
+/*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
+initComparisons();
+</script>
+            
+            <article>
+				<p style="font-size:25px;">
+                The Moon is an astronomical body that orbits planet Earth and is Earth's only permanent natural satellite. It is the fifth-largest natural satellite in the Solar System, and the largest among planetary satellites relative to the size of the planet that it orbits. The Moon is after Jupiter's satellite Io the second-densest satellite in the Solar System among those whose densities are known.<br> The Moon is thought to have formed about 4.51 billion years ago, not long after Earth. The most widely accepted explanation is that the Moon formed from the debris left over after a giant impact between Earth and a Mars-sized body called Theia.
+                </p>
+			</article>
+		</main>
+		
+		<aside>
+		</aside>
+		
+		
+		<footer>
+			<p> Copyright 2019 </p>
+		</footer>
+		
+		
+	</body>
+</html>
