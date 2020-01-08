@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+	 <head>
+		<title>Sadeem</title>
+		<link rel="icon" href="img/LinB2.png">
+		<link rel="stylesheet" href="CS.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style> 
+	#caal{
+padding-top: 30%;
+padding-left: 30%;
+}	
+  table {
+   border: 1px solid #999;
+   border-collapse: collapse;
+   font-family: Georgia, Times, serif;
+   background: #000080;
+   }
+   th {
+   border: 3px solid #999;
+   font-size: 70%;
+   text-transform: uppercase;
+   }
+   td {
+   border: 2px solid #999;
+   height: 3em;
+   width:12em;
+   padding: 5px;
+   vertical-align: top;
+   }
+   caption {
+   font-size: 300%;
+   font-style: italic;
+   }
+   .day {
+   text-align: right;
+   }
+   .event{
+      text-align: right;
+
+   }
+  </style>
+	</head>
+	
+	<body>
+		<header>
+			<!-- Search box -->
+			<div class="SearchBox">
+				<input class="inputTxt" type="text" name="Search" placeholder="Search..."/>
+				<a class="Sbtn"><i class="fa fa-search"></i></a>
+			</div>
+			<!-- end -->
+			
+			<!-- الشعار -->
+			<img id="logo" src="img/logo3.png" alt="Sadeem" width="350" height="250">
+			
+			<!-- القائمة-->
+	<div class="navbar">
+			
+				<a href="index.html"> <img class="imge" src="img/Home.png" alt=""> Home </a>	
+				
+				<div class="dropdown">
+					<button onclick="location.href='News.html'" class="dropbtn"> <img class="imge" id="Nws" src="img/New.png" alt=""> <a href="News.html">  News </a></button>
+					<div class="dropdown-content">
+						<a href="NewsAboutAstronomy.html">News about astronomy</a>
+						<a href="Calendar.html">Calendar</a>
+					</div>
+				</div>
+				
+				<a href="SpaceMuseum.html"> <img class="imge" src="img/Museum.png" alt=""> Space Museum </a>
+				
+				<div class="dropdown">
+					<button class="dropbtn"> <img class="imge" id="SpGme" src="img/games.png" alt=""> <a href="spacegamehome.html"> Space games </a></button> 
+					<div class="dropdown-content">
+						<a href="spacegame1.html">Space games 1</a>
+						<a href="spacegame2.html">Space games 2</a>
+					</div>
+				</div>
+				
+				<a href="watpn.html" > <img class="imge" id="WATPN" src="img/Sun.png" alt=""> Where are the planets now?</a>
+				<a href="ContactUs.html"> <img class="imge" src="img/ContUs.png" alt=""> Contact us</a>
+				<a href="AboutUs.html"> <img class="imge" src="img/AboutUs.png" alt=""> About us</a>
+				<a href="Sitemap.html"> <img class="imge" src="img/Sitemap.png" alt=""> Sitemap</a>
+			</div> 
+			<!-- end -->
+
+			<!-- Breadcrumb -->
+			<ul class="Breadcrumb">
+				<li> <a href="index.html"> Home </a> </li>
+				<li> <a href="News.html"> News </a></li>
+                <li> Calendar </li>
+			</ul>
+			<!-- end Breadcrumb -->
+		</header>
+		
+		
+		<main style=padding-bottom:40%;>
+<div id="caal">
+
+<select class="sorting" name="sort by" onchange="sorting(ttable,this.value)">
+<option value="0" >date</option>
+<option value="1">event</option>
+</select>
+
+ <table id="myTable" >
+  <caption>events</caption>
+
+  <thead>
+    <tr>
+      <th >date</th>
+      <th>event</th>
+  
+    </tr>
+  </thead>
+  <tbody id="ttable">
+    <tr>
+      <td> <div class="day"> day 1: sunday</div></td>
+      <td><div class="event"> venus conjunct mercury </div></td>
+
+    </tr>
+    <tr>
+      <td><div class="day"> day 2: monday</div></td>
+      <td><div class="event">  venus conjunct mars </div></td>
+
+    </tr>
+    <tr>
+      <td><div class="day"> day 3: Tuesday</div></td>
+      <td><div class="event">  venus conjunct saturn </div></td>
+    </tr>
+    <tr>
+      <td><div class="day"> day 4: Wednesday</div></td>
+      <td><div class="event"> jupiter conjunct mercury</div></td>
+
+    </tr>
+    <tr>
+      <td><div class="day"> day 5: Thursday</div></td>
+      <td><div class="event"> sun conjunct mercury</div></td>
+
+    </tr>
+	
+	    <tr>
+      <td><div class="day"> day 6: Friday</div></td>
+      <td><div class="event"> sun conjunct venus</div></td>
+
+    </tr>
+	
+	    <tr>
+      <td><div class="day"> day 7: Saturday</div></td>
+      <td><div class="event"> saturn conjunct uranus</div></td>
+
+    </tr>
+  </tbody>
+</table>
+
+
+</div>
+
+<script>
+var index;      // cell index
+var toggleBool; // sorting asc, desc 
+function sorting(tbody, index){
+    this.index = index;
+    if(toggleBool){
+        toggleBool = false;
+    }else{
+        toggleBool = true;
+    }
+
+    var datas= new Array();
+    var tbodyLength = tbody.rows.length;
+    for(var i=0; i<tbodyLength; i++){
+        datas[i] = tbody.rows[i];
+    }
+
+    // sort by cell[index] 
+    datas.sort(compareCells);
+    for(var i=0; i<tbody.rows.length; i++){
+        // rearrange table rows by sorted rows
+        tbody.appendChild(datas[i]);
+    }   
+}
+
+function compareCells(a,b) {
+    var aVal = a.cells[index].innerText;
+    var bVal = b.cells[index].innerText;
+
+    aVal = aVal.replace(/\,/g, '');
+    bVal = bVal.replace(/\,/g, '');
+
+    if(toggleBool){
+        var temp = aVal;
+        aVal = bVal;
+        bVal = temp;
+    } 
+
+    if(aVal.match(/^[0-9]+$/) && bVal.match(/^[0-9]+$/)){
+        return parseFloat(aVal) - parseFloat(bVal);
+    }
+    else{
+          if (aVal < bVal){
+              return -1; 
+          }else if (aVal > bVal){
+                return 1; 
+          }else{
+              return 0;       
+          }         
+    }
+}
+</script>
+		</main>
+		
+		
+		<aside>
+		</aside>
+		
+		
+		<footer>
+			<p> Copyright 2019 </p>
+		</footer>
+		
+		
+	</body>
+</html>
